@@ -35,6 +35,12 @@ ComplexNumber ComplexNumber::operator*(const ComplexNumber& cNum)
 
 ComplexNumber ComplexNumber::operator/(const ComplexNumber& cNum)
 {
-    ComplexNumber quotient(real - cNum.real, imaginary - cNum.imaginary);
+    double denominator = (cNum.real*cNum.real + cNum.imaginary*cNum.imaginary);
+    if (!denominator) {
+        fprintf(stderr, "Can't divide by zero.\n");
+        abort();
+    }
+    ComplexNumber quotient((real*cNum.real + imaginary*cNum.imaginary) / denominator,
+                            (imaginary*cNum.real - real*cNum.imaginary) / denominator);
     return quotient;
 }
