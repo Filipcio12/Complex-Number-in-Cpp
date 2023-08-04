@@ -2,7 +2,7 @@
 
 int main()
 {
-    ComplexNumber num(1.2, -0.5);
-    num.real = 3;
-    std::cout << num;
+    ComplexNumber num1(1, 1);
+    ComplexNumber num2(3, 5);
+    std::cout << num1*num2 << "\n";
 }

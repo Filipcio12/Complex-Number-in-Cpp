@@ -10,10 +10,10 @@ class ComplexNumber {
         ComplexNumber(double real, double imaginary);
         friend std::ostream& operator<<(std::ostream& os, const ComplexNumber& cNum);
 
-        ComplexNumber& operator+(const ComplexNumber& cNum);
-        ComplexNumber& operator-(const ComplexNumber& cNum);
-        ComplexNumber& operator*(const ComplexNumber& cNum);
-        ComplexNumber& operator/(const ComplexNumber& cNum);
+        ComplexNumber operator+(const ComplexNumber& cNum);
+        ComplexNumber operator-(const ComplexNumber& cNum);
+        ComplexNumber operator*(const ComplexNumber& cNum);
+        ComplexNumber operator/(const ComplexNumber& cNum);
 
         ComplexNumber& operator+=(const ComplexNumber& cNum);
         ComplexNumber& operator-=(const ComplexNumber& cNum);
