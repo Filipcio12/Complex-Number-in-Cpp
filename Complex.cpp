@@ -20,9 +20,33 @@ ComplexNumber ComplexNumber::operator+(const ComplexNumber& cNum)
     return sum;
 }
 
+ComplexNumber ComplexNumber::operator+(double num)
+{
+    ComplexNumber sum(real + num, imaginary);
+    return sum;
+}
+
+ComplexNumber operator+(double num, const ComplexNumber& cNum)
+{
+    ComplexNumber sum(cNum.real + num, cNum.imaginary);
+    return sum;
+}
+
 ComplexNumber ComplexNumber::operator-(const ComplexNumber& cNum)
 {
     ComplexNumber diff(real - cNum.real, imaginary - cNum.imaginary);
+    return diff;
+}
+
+ComplexNumber ComplexNumber::operator-(double num)
+{
+    ComplexNumber diff(real - num, imaginary);
+    return diff;
+}
+
+ComplexNumber operator-(double num, const ComplexNumber& cNum)
+{
+    ComplexNumber diff(num - cNum.real, 0 - cNum.imaginary);
     return diff;
 }
 
