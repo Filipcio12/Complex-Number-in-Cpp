@@ -2,9 +2,6 @@
 
 int main()
 {
-    ComplexNumber num1(3, 5);
-    ComplexNumber num2(1, 1);
-    std::cout << "Sum: " << num1 - 2 << std::endl;
-    std::cout << num1 << std::endl;
-    std::cout << num2 << std::endl;
+    ComplexNumber num(2, 2);
+    std::cout << 2 / num;
 }
