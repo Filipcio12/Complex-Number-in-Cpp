@@ -7,6 +7,13 @@ ComplexNumber::ComplexNumber(double real, double imaginary)
     this->imaginary = imaginary;
 }
 
+ComplexNumber ComplexNumber::operator=(const ComplexNumber& cNum)
+{
+    real = cNum.real;
+    imaginary = cNum.imaginary;
+    return *this;
+}
+
 std::ostream& operator<<(std::ostream& os, const ComplexNumber& cNum)
 {
     char sign = 43 + 2*(cNum.imaginary < 0);
@@ -30,6 +37,18 @@ ComplexNumber operator+(double num, const ComplexNumber& cNum)
 {
     ComplexNumber sum(cNum.real + num, cNum.imaginary);
     return sum;
+}
+
+ComplexNumber ComplexNumber::operator+=(const ComplexNumber& cNum)
+{
+    *this = *this + cNum;
+    return *this;
+}
+
+ComplexNumber ComplexNumber::operator+=(double num)
+{
+    *this = *this + num;
+    return *this;
 }
 
 ComplexNumber ComplexNumber::operator-(const ComplexNumber& cNum)
