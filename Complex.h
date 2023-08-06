@@ -38,6 +38,10 @@ class ComplexNumber {
         ComplexNumber operator/=(const ComplexNumber& cNum);
         ComplexNumber operator/=(double num);
 
-        ComplexNumber& operator==(const ComplexNumber& cNum);
-        ComplexNumber& operator!=(const ComplexNumber& cNum);
+        bool operator==(const ComplexNumber& cNum);
+        bool operator==(double num);
+        friend bool operator==(double num, const ComplexNumber& cNum);
+        bool operator!=(const ComplexNumber& cNum);
+        bool operator!=(double num);
+        friend bool operator!=(double num, const ComplexNumber& cNum);
 };

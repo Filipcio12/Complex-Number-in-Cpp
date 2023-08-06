@@ -2,9 +2,7 @@
 
 int main()
 {
-    ComplexNumber a(2, 2);
-    ComplexNumber b(3, 3);
-    a += 2;
-    std::cout << a << std::endl;
+    ComplexNumber num(1, 0);
+    std::cout << (1 != num) << std::endl;
     return 0;
 }

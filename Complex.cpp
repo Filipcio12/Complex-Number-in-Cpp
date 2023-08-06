@@ -157,3 +157,33 @@ ComplexNumber ComplexNumber::operator/=(double num)
     *this = *this / num;
     return *this;
 }
+
+bool ComplexNumber::operator==(const ComplexNumber& cNum)
+{
+    return (real == cNum.real && imaginary == cNum.imaginary);
+}
+
+bool ComplexNumber::operator==(double num)
+{
+    return (real == num && imaginary == 0);
+}
+
+bool operator==(double num, const ComplexNumber& cNum)
+{
+    return (cNum.real == num && cNum.imaginary == 0);
+}
+
+bool ComplexNumber::operator!=(const ComplexNumber& cNum)
+{
+    return !(real == cNum.real && imaginary == cNum.imaginary);
+}
+
+bool ComplexNumber::operator!=(double num)
+{
+    return !(real == num && imaginary == 0);
+}
+
+bool operator!=(double num, const ComplexNumber& cNum)
+{
+    return !(cNum.real == num && cNum.imaginary == 0);
+}
