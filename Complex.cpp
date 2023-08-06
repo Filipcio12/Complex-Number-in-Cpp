@@ -69,6 +69,18 @@ ComplexNumber operator-(double num, const ComplexNumber& cNum)
     return diff;
 }
 
+ComplexNumber ComplexNumber::operator-=(const ComplexNumber& cNum)
+{
+    *this = *this - cNum;
+    return *this;
+}
+
+ComplexNumber ComplexNumber::operator-=(double num)
+{
+    *this = *this - num;
+    return *this;
+}
+
 ComplexNumber ComplexNumber::operator*(const ComplexNumber& cNum)
 {
     ComplexNumber product(real*cNum.real - imaginary*cNum.imaginary, 
@@ -86,6 +98,18 @@ ComplexNumber operator*(double num, const ComplexNumber& cNum)
 {
     ComplexNumber product(cNum.real*num, cNum.imaginary*num);
     return product;
+}
+
+ComplexNumber ComplexNumber::operator*=(const ComplexNumber& cNum)
+{
+    *this = *this * cNum;
+    return *this;
+}
+
+ComplexNumber ComplexNumber::operator*=(double num)
+{
+    *this = *this * num;
+    return *this;
 }
 
 ComplexNumber ComplexNumber::operator/(const ComplexNumber& cNum)
@@ -120,4 +144,16 @@ ComplexNumber operator/(double num, const ComplexNumber& cNum)
     ComplexNumber quotient(num*cNum.real/denominator, 
                             -num*cNum.imaginary/denominator);
     return quotient;
+}
+
+ComplexNumber ComplexNumber::operator/=(const ComplexNumber& cNum)
+{
+    *this = *this / cNum;
+    return *this;
+}
+
+ComplexNumber ComplexNumber::operator/=(double num)
+{
+    *this = *this / num;
+    return *this;
 }

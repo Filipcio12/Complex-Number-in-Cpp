@@ -23,14 +23,20 @@ class ComplexNumber {
         ComplexNumber operator-(const ComplexNumber& cNum);
         ComplexNumber operator-(double num);
         friend ComplexNumber operator-(double num, const ComplexNumber& cNum);
+        ComplexNumber operator-=(const ComplexNumber& cNum);
+        ComplexNumber operator-=(double num);
 
         ComplexNumber operator*(const ComplexNumber& cNum);
         ComplexNumber operator*(double num);
         friend ComplexNumber operator*(double num, const ComplexNumber& cNum);
+        ComplexNumber operator*=(const ComplexNumber& cNum);
+        ComplexNumber operator*=(double num);
 
         ComplexNumber operator/(const ComplexNumber& cNum);
         ComplexNumber operator/(double num);
         friend ComplexNumber operator/(double num, const ComplexNumber& cNum);
+        ComplexNumber operator/=(const ComplexNumber& cNum);
+        ComplexNumber operator/=(double num);
 
         ComplexNumber& operator==(const ComplexNumber& cNum);
         ComplexNumber& operator!=(const ComplexNumber& cNum);
