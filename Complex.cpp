@@ -7,6 +7,16 @@ ComplexNumber::ComplexNumber(double real, double imaginary)
     this->imaginary = imaginary;
 }
 
+double ComplexNumber::getAmplitude()
+{
+    return (sqrt(real*real + imaginary*imaginary));
+}
+
+double ComplexNumber::getPhase()
+{
+    return (atan(imaginary / real));
+}
+
 ComplexNumber ComplexNumber::operator=(const ComplexNumber& cNum)
 {
     real = cNum.real;
