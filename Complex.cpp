@@ -17,7 +17,7 @@ double ComplexNumber::getPhase()
     return (atan(imaginary / real));
 }
 
-ComplexNumber ComplexNumber::operator=(const ComplexNumber& cNum)
+ComplexNumber& ComplexNumber::operator=(const ComplexNumber& cNum)
 {
     real = cNum.real;
     imaginary = cNum.imaginary;
@@ -49,13 +49,13 @@ ComplexNumber operator+(double num, const ComplexNumber& cNum)
     return sum;
 }
 
-ComplexNumber ComplexNumber::operator+=(const ComplexNumber& cNum)
+ComplexNumber& ComplexNumber::operator+=(const ComplexNumber& cNum)
 {
     *this = *this + cNum;
     return *this;
 }
 
-ComplexNumber ComplexNumber::operator+=(double num)
+ComplexNumber& ComplexNumber::operator+=(double num)
 {
     *this = *this + num;
     return *this;
@@ -79,13 +79,13 @@ ComplexNumber operator-(double num, const ComplexNumber& cNum)
     return diff;
 }
 
-ComplexNumber ComplexNumber::operator-=(const ComplexNumber& cNum)
+ComplexNumber& ComplexNumber::operator-=(const ComplexNumber& cNum)
 {
     *this = *this - cNum;
     return *this;
 }
 
-ComplexNumber ComplexNumber::operator-=(double num)
+ComplexNumber& ComplexNumber::operator-=(double num)
 {
     *this = *this - num;
     return *this;
@@ -110,13 +110,13 @@ ComplexNumber operator*(double num, const ComplexNumber& cNum)
     return product;
 }
 
-ComplexNumber ComplexNumber::operator*=(const ComplexNumber& cNum)
+ComplexNumber& ComplexNumber::operator*=(const ComplexNumber& cNum)
 {
     *this = *this * cNum;
     return *this;
 }
 
-ComplexNumber ComplexNumber::operator*=(double num)
+ComplexNumber& ComplexNumber::operator*=(double num)
 {
     *this = *this * num;
     return *this;
@@ -156,13 +156,13 @@ ComplexNumber operator/(double num, const ComplexNumber& cNum)
     return quotient;
 }
 
-ComplexNumber ComplexNumber::operator/=(const ComplexNumber& cNum)
+ComplexNumber& ComplexNumber::operator/=(const ComplexNumber& cNum)
 {
     *this = *this / cNum;
     return *this;
 }
 
-ComplexNumber ComplexNumber::operator/=(double num)
+ComplexNumber& ComplexNumber::operator/=(double num)
 {
     *this = *this / num;
     return *this;
