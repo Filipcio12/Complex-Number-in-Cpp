@@ -38,8 +38,16 @@ void testChainAddition(){
 	ComplexNumber c(7, -3);
 	
 	a += b += c;
-	
-	std::cout << a << "\t" << b << "\t" << c << "\n";
+
+    ComplexNumber a1(12, 13);
+    ComplexNumber b1(10, 3);
+    ComplexNumber c1(7, -3);
+
+    if (a == a1 && b == b1 && c == c1) {
+        std::cout << "Chain addition: Passed" << std::endl;
+    } else {
+        std::cout << "Chain addition: Failed" << std::endl;
+    }
 }
 
 void testChainAdditionBraces(){
@@ -48,8 +56,16 @@ void testChainAdditionBraces(){
 	ComplexNumber c(7, -3);
 	
 	(a += b) += c;
+
+    ComplexNumber a1(12, 13);
+    ComplexNumber b1(3, 6);
+	ComplexNumber c1(7, -3);
 	
-	std::cout << a << "\t" << b << "\t" << c << "\n";
+	if (a == a1 && b == b1 && c == c1) {
+        std::cout << "Chain addition (braces): Passed" << std::endl;
+    } else {
+        std::cout << "Chain addition (braces): Failed" << std::endl;
+    }
 }
 
 void testChainMultiplication(){
@@ -58,8 +74,16 @@ void testChainMultiplication(){
 	ComplexNumber c(7, -3);
 	
 	a *= b *= c;
+
+    ComplexNumber a1(-252, 456);
+    ComplexNumber b1(39, 33);
+    ComplexNumber c1(7, -3);
 	
-	std::cout << a << "\t" << b << "\t" << c << "\n";
+	if (a == a1 && b == b1 && c == c1) {
+        std::cout << "Chain multiplication: Passed" << std::endl;
+    } else {
+        std::cout << "Chain multiplication: Failed" << std::endl;
+    }
 }
 
 void testChainMultiplicationBraces(){
@@ -68,8 +92,16 @@ void testChainMultiplicationBraces(){
 	ComplexNumber c(7, -3);
 	
 	(a *= b) *= c;
+
+    ComplexNumber a1(-252, 456);
+    ComplexNumber b1(3, 6);
+	ComplexNumber c1(7, -3);
 	
-	std::cout << a << "\t" << b << "\t" << c << "\n";
+	if (a == a1 && b == b1 && c == c1) {
+        std::cout << "Chain multiplication (braces): Passed" << std::endl;
+    } else {
+        std::cout << "Chain multiplication (braces): Failed" << std::endl;
+    }
 }
 
 void testConstructor() {
@@ -151,9 +183,9 @@ void testGetPhase() {
     double expectedPhase = 0.927295;
 
     if (std::abs(phase - expectedPhase) < 1e-6) {
-        std::cout << "getPhase() Test: Passed" << std::endl;
+        std::cout << "Phase: Passed" << std::endl;
     } else {
-        std::cout << "getPhase() Test: Failed" << std::endl;
+        std::cout << "Phase: Failed" << std::endl;
     }
 }
 
@@ -163,8 +195,8 @@ void testGetAmplitude() {
     double expectedAmplitude = 5.0;
 
     if (std::abs(magnitude - expectedAmplitude) < 1e-6) {
-        std::cout << "getMagnitude() Test: Passed" << std::endl;
+        std::cout << "Magnitude: Passed" << std::endl;
     } else {
-        std::cout << "getMagnitude() Test: Failed" << std::endl;
+        std::cout << "Magnitude: Failed" << std::endl;
     }
 }
